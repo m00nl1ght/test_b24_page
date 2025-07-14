@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Мой виджет</title>
+    <script src="https://api.bitrix24.com/api/v1/"></script>
+    <script>
+        BX24.init(function() {
+            BX24.installFinish(); // Обязательно для виджетов в маркетплейсе
+            document.getElementById("greeting").innerText = "Привет, " + BX24.getUser().NAME;
+        });
+    </script>
+</head>
+<body>
+    <h1 id="greeting">Загрузка...</h1>
+</body>
+</html>
